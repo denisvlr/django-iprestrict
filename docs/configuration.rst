@@ -19,11 +19,11 @@ Enable Django Admin for at least the iprestrict application.
 
 Add the urls of iprestrict to your project. Ex in your root urls.py::
 
-  from django.conf.urls import url, include
+  from djang.urls import re_path, include
 
   urlpatterns = [
       # ... snip ...
-      url(r'^iprestrict/', include('iprestrict.urls', namespace='iprestrict')),
+      re_path(r'^iprestrict/', include('iprestrict.urls', namespace='iprestrict')),
 
 This configuration will allow you to configure and test your restriction rules.
 
